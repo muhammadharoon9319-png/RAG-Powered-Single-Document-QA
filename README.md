@@ -1,86 +1,79 @@
-# Single Local Document Query Assistant 📄
+# **📄 RAG-Powered Single Document Q\&A (Streamlit App)**
 
-## Overview
+## **Overview**
 
-This streamlit app allows users to upload documents and ask specific questions about their contents. Utilizing state-of-the-art Deepseek R1 Reasoning Language Models, this application provides intelligent, context-aware responses by analyzing the uploaded document.
+This Streamlit application allows users to upload local documents (PDF, Word, Text, and Markdown) and ask specific questions about their contents. Utilizing state-of-the-art **DeepSeek R1 Reasoning Language Models**, this application provides intelligent, context-aware responses by analyzing the uploaded document. It delivers powerful answers complete with grounding and evaluation metrics.
 
-## Features
+## **🚀 Key Features**
 
-- 🔍 Multi-document support
-  - Upload PDF, Word, Text, and Markdown files
-  - Extract and analyze document contents
+* **Multi-Document Support**: Upload multiple file types (PDF, Word, Text, and Markdown files) with automatic content extraction and analysis.  
+* **Advanced AI Reasoning**: Integrates multiple **DeepSeek R1** language models for intelligent query processing and context-aware natural language Q\&A over document contents.  
+* **Response Evaluation**: Provides built-in metrics and tools for response analysis:  
+  * Grounding score measurement  
+  * Quality score verification  
+  * Detailed response analysis
 
-- 🤖 Advanced AI Models
-  - Multiple DeepSeek language models
-  - Intelligent query processing
-  - Context-aware response generation
+## **⚡ Prerequisites**
 
-- 📊 Response Evaluation
-  - Grounding score assessment
-  - Quality score verification
-  - Detailed response analysis
+| Requirement | Detail |
+| :---- | :---- |
+| **Python** | Python 3.8+ |
+| **GPU** | CUDA-compatible GPU (Recommended for faster inference) |
+| **RAM** | Minimum 16GB RAM (Suggested for operating large models) |
 
-## Prerequisites
+## **⚙️ Installation**
 
-- Python 3.8+
-- CUDA-compatible GPU (recommended)
-- Minimum 16GB RAM
+Follow these steps to set up the application environment:
 
-## Installation
+### **1\. Clone the Repository**
 
-1. Clone the repository:
-```bash
-git clone https://github.com/abdul-456/SLM-Fine-Tuning
-cd SLM-Fine-Tuning/Agentic-RAG/Single-Local-Document-RAG
-```
+git clone \[https://github.com/muhammadharoon9319-png/RAG-Powered-Single-Document-Q-A.git] 
 
-2. Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
+### **2\. Create a Virtual Environment**
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+python \-m venv venv  
+source venv/bin/activate   \# On Windows, use \`venv\\Scripts\\activate\`
 
-4. Set up environment variables:
-- Create a `.env` file in the project root
-- Add your Google API key:
-```
-GOOGLE_API_KEY=your_google_api_key_here
-```
+### **3\. Install Dependencies**
 
-## Usage
+pip install \-r requirements.txt
 
-Run the Streamlit application:
-```bash
+### **4\. Set up Environment Variables**
+
+Create a file named .env in the project root and add your Google API key:
+
+GOOGLE\_API\_KEY=your\_google\_api\_key\_here
+
+## **🚀 Usage**
+
+Run the Streamlit application using the following command:
+
 streamlit run main.py
-```
 
-### Application Workflow
-1. Upload a document
-2. Select a reasoning model
-3. Enter your query related to the dcoument
-5. Optionally evaluate model responses using Facts Evaluation
+### **Application Workflow (🛠)**
 
-## Model Options
+1. Upload one or more documents.  
+2. Select a reasoning model from the available options.  
+3. Enter your query related to the document(s).  
+4. View AI-generated, context-aware answers.  
+5. Optionally evaluate model responses using **Facts Evaluation**.
 
-The application supports multiple DeepSeek models:
-- DeepSeek-R1-Distill-Llama-8B
-- DeepSeek-R1-Distill-QWen-7B
-- DeepSeek-R1-Distill-QWen-14B
+## **🤖 Supported Models**
 
-## Advanced Features
+The application supports multiple DeepSeek R1 Distill models:
 
-- Raw model output debugging
-- Detailed response evaluation
-- CSV export of results and evaluations
+* DeepSeek-R1-Distill-Llama-8B  
+* DeepSeek-R1-Distill-QWen-7B  
+* DeepSeek-R1-Distill-QWen-14B
 
-## Performance Notes
+## **🔬 Advanced Features**
 
-- Larger models require more computational resources
-- Recommended for systems with dedicated GPUs
-- Processing time varies based on document size and model complexity
+* Raw model output debugging  
+* Detailed response evaluation  
+* Export results & evaluations as CSV
 
+## **⚡ Performance Notes**
+
+* Larger models require more computational resources (CPU/GPU).  
+* The best performance is achieved on systems with dedicated GPUs.  
+* Processing time varies based on the size of the uploaded document and the complexity of the selected model.
